@@ -190,7 +190,7 @@ nav a:hover{
     color: #6b705c;
     text-align: left;
 }
-.bar{
+.bar{  /* 第一層的div */
     display: flex;
     justify-content: left;
     align-items: center;
@@ -198,7 +198,7 @@ nav a:hover{
     padding-bottom: 30px;
 }
 
-.bar-line{
+.bar-line{ /* 設定內部進度條長度 */
     display: flex;
     background-color: white;
     height: 15px;
@@ -206,7 +206,7 @@ nav a:hover{
     border-radius: 10px;
 }
 
-.bar-line::after{
+.bar-line::after{ /* 設定進度條實際長度 */
     content: "";
     display: flex;
     background-color: #6b705c;
@@ -216,7 +216,7 @@ nav a:hover{
     animation-fill-mode: forwards;
 }
 
-.bar-line1{
+.bar-line1{ /* 設定內部進度條長度 */
     display: flex;
     background-color: white;
     height: 15px;
@@ -224,7 +224,7 @@ nav a:hover{
     border-radius: 10px;
 }
 
-.bar-line1::after{
+.bar-line1::after{ /* 設定進度條實際長度 */
     content: "";
     display: flex;
     background-color: #6b705c;
@@ -234,7 +234,7 @@ nav a:hover{
     animation-fill-mode: forwards;
 }
 
-.bar-line2{
+.bar-line2{ /* 設定內部進度條長度 */
     display: flex;
     background-color: white;
     height: 15px;
@@ -242,7 +242,7 @@ nav a:hover{
     border-radius: 10px;
 }
 
-.bar-line2::after{
+.bar-line2::after{ /* 設定進度條實際長度 */
     content: "";
     display: flex;
     background-color: #6b705c;
@@ -251,11 +251,6 @@ nav a:hover{
     animation: line-percentage3 3s ease;
     animation-fill-mode: forwards;
 }
-article::after{
-    content: "";
-    display: block;
-    clear: both;
- } 
 
 .solidline{
     border-top: solid #6b705c 2px;
@@ -266,10 +261,11 @@ article::after{
 .container2{
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 500px;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin: 0 auto;
-    padding: 5% 0;
+    width: 80%;
+    padding: 20px 0;
     row-gap: 20px;
 }
 
@@ -288,26 +284,23 @@ article::after{
 }
 .example{
     background-color: #ede0d4;
-    width: 45%;
     border-radius: 100px;
     display: flex;
     align-items: center;
-    /* padding: 10px; */
+    height: 250px;
+    width: 60%;
 }
 
 .example1{
    align-self: flex-end;
 }
 
-.example img{
+.circle img{
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    margin-right: 10px;
-}
-.circle{
-    max-width: 45%;
-    max-height: 45%;
+    max-width: 250px;
+    max-height: 250px;
 }
 .example ul li{
     color: #6b705c;
@@ -316,6 +309,12 @@ article::after{
     list-style: none;
     margin: 0;
 }
+
+article::after{
+    content: "";
+    display: block;
+    clear: both;
+} 
 footer{
     background-color: #ddbea9;
     text-align: center;
